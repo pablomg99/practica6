@@ -33,5 +33,6 @@ private:
     Ui::MainWindow *ui;
     QGraphicsScene *escena;
     QList<cuerpo*> cuerpos;
+    QTimer *time;
 };
 #endif // MAINWINDOW_H

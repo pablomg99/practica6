@@ -576,7 +576,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        TabWidget->setCurrentIndex(0);
+        TabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -605,7 +605,7 @@ public:
         limpiarValoresBtn->setText(QCoreApplication::translate("MainWindow", "Limpiar", nullptr));
         TabWidget->setTabText(TabWidget->indexOf(SetUpTab), QCoreApplication::translate("MainWindow", "Set up", nullptr));
         stopSimBtn->setText(QCoreApplication::translate("MainWindow", "Detener simulacion", nullptr));
-        startSimBtn->setText(QCoreApplication::translate("MainWindow", "Inicear simulacion", nullptr));
+        startSimBtn->setText(QCoreApplication::translate("MainWindow", "Iniciar simulacion", nullptr));
         TabWidget->setTabText(TabWidget->indexOf(simTab), QCoreApplication::translate("MainWindow", "Simulacion", nullptr));
     } // retranslateUi
 

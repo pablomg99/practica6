@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -23,6 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete time;
 }
 
 
@@ -146,17 +148,67 @@ void MainWindow::on_limpiarValoresBtn_clicked()
     cuerpos.clear();
 
     ui->widget->setVisible(false);
+    ui->w1_x0_sb->setValue(0);
+    ui->w1_Y0_sb->setValue(0);
+    ui->w1_m_dsb->setValue(0);
+    ui->w1_r_dsb->setValue(0);
+    ui->w1_vx0_dsb->setValue(0);
+    ui->w1_vy0_dsb->setValue(0);
+
     ui->widget_2->setVisible(false);
+    ui->w2_x0_sb->setValue(0);
+    ui->w2_Y0_sb->setValue(0);
+    ui->w2_m_dsb->setValue(0);
+    ui->w2_r_dsb->setValue(0);
+    ui->w2_vx0_dsb->setValue(0);
+    ui->w2_vy0_dsb->setValue(0);
+
     ui->widget_3->setVisible(false);
+    ui->w3_x0_sb->setValue(0);
+    ui->w3_Y0_sb->setValue(0);
+    ui->w3_m_dsb->setValue(0);
+    ui->w3_r_dsb->setValue(0);
+    ui->w3_vx0_dsb->setValue(0);
+    ui->w3_vy0_dsb->setValue(0);
+
     ui->widget_4->setVisible(false);
+    ui->w4_x0_sb->setValue(0);
+    ui->w4_Y0_sb->setValue(0);
+    ui->w4_m_dsb->setValue(0);
+    ui->w4_r_dsb->setValue(0);
+    ui->w4_vx0_dsb->setValue(0);
+    ui->w4_vy0_dsb->setValue(0);
+
     ui->widget_5->setVisible(false);
+    ui->w5_x0_sb->setValue(0);
+    ui->w5_Y0_sb->setValue(0);
+    ui->w5_m_dsb->setValue(0);
+    ui->w5_r_dsb->setValue(0);
+    ui->w5_vx0_dsb->setValue(0);
+    ui->w5_vy0_dsb->setValue(0);
+
     ui->widget_6->setVisible(false);
+    ui->w6_x0_sb->setValue(0);
+    ui->w6_Y0_sb->setValue(0);
+    ui->w6_m_dsb->setValue(0);
+    ui->w6_r_dsb->setValue(0);
+    ui->w6_vx0_dsb->setValue(0);
+    ui->w6_vy0_dsb->setValue(0);
+
     ui->widget_7->setVisible(false);
+    ui->w7_x0_sb->setValue(0);
+    ui->w7_Y0_sb->setValue(0);
+    ui->w7_m_dsb->setValue(0);
+    ui->w7_r_dsb->setValue(0);
+    ui->w7_vx0_dsb->setValue(0);
+    ui->w7_vy0_dsb->setValue(0);
+
 }
 
 
 void MainWindow::on_startSimBtn_clicked()
 {
-
+    time=new QTimer;
+    connect(time, SIGNAL(timeout()), this, SLOT(mover_elemento()));
 }
 
