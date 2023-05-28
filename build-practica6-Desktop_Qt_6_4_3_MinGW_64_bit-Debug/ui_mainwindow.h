@@ -39,10 +39,10 @@ public:
     QSpinBox *cantCuerposSpinBox;
     QPushButton *aplicarBtn;
     QWidget *widget;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label;
-    QSpinBox *w1_X0_sb;
+    QSpinBox *w1_x0_sb;
     QSpinBox *w1_Y0_sb;
     QDoubleSpinBox *w1_m_dsb;
     QDoubleSpinBox *w1_r_dsb;
@@ -109,7 +109,7 @@ public:
     QDoubleSpinBox *w7_vx0_dsb;
     QDoubleSpinBox *w7_vy0_dsb;
     QWidget *widget_8;
-    QWidget *widget2;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout;
     QLabel *cuerpoLbl;
     QLabel *X0Lbl;
@@ -118,7 +118,7 @@ public:
     QLabel *radioLbl;
     QLabel *velX0Lbl;
     QLabel *velY0Lbl;
-    QWidget *widget3;
+    QWidget *layoutWidget3;
     QHBoxLayout *horizontalLayout_4;
     QPushButton *guardarValoresBtn;
     QPushButton *limpiarValoresBtn;
@@ -167,43 +167,43 @@ public:
         widget = new QWidget(SetUpTab);
         widget->setObjectName("widget");
         widget->setGeometry(QRect(0, 140, 781, 31));
-        widget1 = new QWidget(widget);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(0, 0, 771, 27));
-        horizontalLayout_5 = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(widget);
+        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setGeometry(QRect(0, 0, 771, 27));
+        horizontalLayout_5 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(widget1);
+        label = new QLabel(layoutWidget1);
         label->setObjectName("label");
 
         horizontalLayout_5->addWidget(label, 0, Qt::AlignHCenter);
 
-        w1_X0_sb = new QSpinBox(widget1);
-        w1_X0_sb->setObjectName("w1_X0_sb");
+        w1_x0_sb = new QSpinBox(layoutWidget1);
+        w1_x0_sb->setObjectName("w1_x0_sb");
 
-        horizontalLayout_5->addWidget(w1_X0_sb);
+        horizontalLayout_5->addWidget(w1_x0_sb);
 
-        w1_Y0_sb = new QSpinBox(widget1);
+        w1_Y0_sb = new QSpinBox(layoutWidget1);
         w1_Y0_sb->setObjectName("w1_Y0_sb");
 
         horizontalLayout_5->addWidget(w1_Y0_sb);
 
-        w1_m_dsb = new QDoubleSpinBox(widget1);
+        w1_m_dsb = new QDoubleSpinBox(layoutWidget1);
         w1_m_dsb->setObjectName("w1_m_dsb");
 
         horizontalLayout_5->addWidget(w1_m_dsb);
 
-        w1_r_dsb = new QDoubleSpinBox(widget1);
+        w1_r_dsb = new QDoubleSpinBox(layoutWidget1);
         w1_r_dsb->setObjectName("w1_r_dsb");
 
         horizontalLayout_5->addWidget(w1_r_dsb);
 
-        w1_vx0_dsb = new QDoubleSpinBox(widget1);
+        w1_vx0_dsb = new QDoubleSpinBox(layoutWidget1);
         w1_vx0_dsb->setObjectName("w1_vx0_dsb");
 
         horizontalLayout_5->addWidget(w1_vx0_dsb);
 
-        w1_vy0_dsb = new QDoubleSpinBox(widget1);
+        w1_vy0_dsb = new QDoubleSpinBox(layoutWidget1);
         w1_vy0_dsb->setObjectName("w1_vy0_dsb");
 
         horizontalLayout_5->addWidget(w1_vy0_dsb);
@@ -475,67 +475,67 @@ public:
         widget_8 = new QWidget(SetUpTab);
         widget_8->setObjectName("widget_8");
         widget_8->setGeometry(QRect(0, 100, 781, 21));
-        widget2 = new QWidget(widget_8);
-        widget2->setObjectName("widget2");
-        widget2->setGeometry(QRect(0, 0, 771, 18));
-        horizontalLayout = new QHBoxLayout(widget2);
+        layoutWidget2 = new QWidget(widget_8);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(0, 0, 771, 18));
+        horizontalLayout = new QHBoxLayout(layoutWidget2);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        cuerpoLbl = new QLabel(widget2);
+        cuerpoLbl = new QLabel(layoutWidget2);
         cuerpoLbl->setObjectName("cuerpoLbl");
         cuerpoLbl->setAlignment(Qt::AlignCenter);
         cuerpoLbl->setMargin(0);
 
         horizontalLayout->addWidget(cuerpoLbl);
 
-        X0Lbl = new QLabel(widget2);
+        X0Lbl = new QLabel(layoutWidget2);
         X0Lbl->setObjectName("X0Lbl");
         X0Lbl->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(X0Lbl);
 
-        Y0Lbl = new QLabel(widget2);
+        Y0Lbl = new QLabel(layoutWidget2);
         Y0Lbl->setObjectName("Y0Lbl");
         Y0Lbl->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(Y0Lbl);
 
-        masaLbl = new QLabel(widget2);
+        masaLbl = new QLabel(layoutWidget2);
         masaLbl->setObjectName("masaLbl");
         masaLbl->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(masaLbl);
 
-        radioLbl = new QLabel(widget2);
+        radioLbl = new QLabel(layoutWidget2);
         radioLbl->setObjectName("radioLbl");
         radioLbl->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(radioLbl);
 
-        velX0Lbl = new QLabel(widget2);
+        velX0Lbl = new QLabel(layoutWidget2);
         velX0Lbl->setObjectName("velX0Lbl");
         velX0Lbl->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(velX0Lbl);
 
-        velY0Lbl = new QLabel(widget2);
+        velY0Lbl = new QLabel(layoutWidget2);
         velY0Lbl->setObjectName("velY0Lbl");
         velY0Lbl->setAlignment(Qt::AlignCenter);
 
         horizontalLayout->addWidget(velY0Lbl);
 
-        widget3 = new QWidget(SetUpTab);
-        widget3->setObjectName("widget3");
-        widget3->setGeometry(QRect(9, 476, 241, 26));
-        horizontalLayout_4 = new QHBoxLayout(widget3);
+        layoutWidget3 = new QWidget(SetUpTab);
+        layoutWidget3->setObjectName("layoutWidget3");
+        layoutWidget3->setGeometry(QRect(9, 476, 241, 26));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_4->setObjectName("horizontalLayout_4");
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
-        guardarValoresBtn = new QPushButton(widget3);
+        guardarValoresBtn = new QPushButton(layoutWidget3);
         guardarValoresBtn->setObjectName("guardarValoresBtn");
 
         horizontalLayout_4->addWidget(guardarValoresBtn);
 
-        limpiarValoresBtn = new QPushButton(widget3);
+        limpiarValoresBtn = new QPushButton(layoutWidget3);
         limpiarValoresBtn->setObjectName("limpiarValoresBtn");
 
         horizontalLayout_4->addWidget(limpiarValoresBtn);

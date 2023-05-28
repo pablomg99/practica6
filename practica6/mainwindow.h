@@ -25,6 +25,10 @@ private slots:
 
     void on_guardarValoresBtn_clicked();
 
+    void on_limpiarValoresBtn_clicked();
+
+    void on_startSimBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *escena;

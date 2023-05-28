@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="TabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="SetUpTab">
        <attribute name="title">
@@ -62,7 +62,7 @@
           <height>31</height>
          </rect>
         </property>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -80,7 +80,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QSpinBox" name="w1_X0_sb"/>
+           <widget class="QSpinBox" name="w1_x0_sb"/>
           </item>
           <item>
            <widget class="QSpinBox" name="w1_Y0_sb"/>
@@ -391,7 +391,7 @@
           <height>21</height>
          </rect>
         </property>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -477,7 +477,7 @@
          </layout>
         </widget>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>9</x>
@@ -519,7 +519,7 @@
         <item row="2" column="0">
          <widget class="QPushButton" name="startSimBtn">
           <property name="text">
-           <string>Inicear simulacion</string>
+           <string>Iniciar simulacion</string>
           </property>
          </widget>
         </item>
