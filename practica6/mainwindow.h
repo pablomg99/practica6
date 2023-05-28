@@ -23,6 +23,8 @@ public:
 private slots:
     void on_aplicarBtn_clicked();
 
+    void on_guardarValoresBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *escena;

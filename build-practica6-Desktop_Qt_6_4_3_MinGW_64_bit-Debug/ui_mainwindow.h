@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
@@ -23,7 +22,6 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -35,36 +33,95 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QTabWidget *TabWidget;
     QWidget *SetUpTab;
-    QPushButton *aceptarBtn;
-    QPushButton *defaultBtn;
-    QWidget *widget;
-    QHBoxLayout *horizontalLayout;
-    QVBoxLayout *verticalLayout;
-    QLabel *cuerpoLbl;
-    QComboBox *comboBox;
-    QVBoxLayout *verticalLayout_2;
-    QLabel *X0Lbl;
-    QSpinBox *spinBox;
-    QVBoxLayout *verticalLayout_3;
-    QLabel *Y0Lbl;
-    QSpinBox *spinBox_2;
-    QVBoxLayout *verticalLayout_4;
-    QLabel *masaLbl;
-    QDoubleSpinBox *doubleSpinBox;
-    QVBoxLayout *verticalLayout_5;
-    QLabel *radioLbl;
-    QDoubleSpinBox *doubleSpinBox_2;
-    QVBoxLayout *verticalLayout_6;
-    QLabel *velX0Lbl;
-    QDoubleSpinBox *doubleSpinBox_3;
-    QVBoxLayout *verticalLayout_7;
-    QLabel *velY0Lbl;
-    QDoubleSpinBox *doubleSpinBox_4;
-    QWidget *widget1;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_2;
     QLabel *cantCuerposLbl;
     QSpinBox *cantCuerposSpinBox;
     QPushButton *aplicarBtn;
+    QWidget *widget;
+    QWidget *widget1;
+    QHBoxLayout *horizontalLayout_5;
+    QLabel *label;
+    QSpinBox *w1_X0_sb;
+    QSpinBox *w1_Y0_sb;
+    QDoubleSpinBox *w1_m_dsb;
+    QDoubleSpinBox *w1_r_dsb;
+    QDoubleSpinBox *w1_vx0_dsb;
+    QDoubleSpinBox *w1_vy0_dsb;
+    QWidget *widget_2;
+    QWidget *layoutWidget_2;
+    QHBoxLayout *horizontalLayout_12;
+    QLabel *label_8;
+    QSpinBox *w2_x0_sb;
+    QSpinBox *w2_Y0_sb;
+    QDoubleSpinBox *w2_m_dsb;
+    QDoubleSpinBox *w2_r_dsb;
+    QDoubleSpinBox *w2_vx0_dsb;
+    QDoubleSpinBox *w2_vy0_dsb;
+    QWidget *widget_3;
+    QWidget *layoutWidget_3;
+    QHBoxLayout *horizontalLayout_13;
+    QLabel *label_9;
+    QSpinBox *w3_x0_sb;
+    QSpinBox *w3_Y0_sb;
+    QDoubleSpinBox *w3_m_dsb;
+    QDoubleSpinBox *w3_r_dsb;
+    QDoubleSpinBox *w3_vx0_dsb;
+    QDoubleSpinBox *w3_vy0_dsb;
+    QWidget *widget_4;
+    QWidget *layoutWidget_4;
+    QHBoxLayout *horizontalLayout_14;
+    QLabel *label_10;
+    QSpinBox *w4_x0_sb;
+    QSpinBox *w4_Y0_sb;
+    QDoubleSpinBox *w4_m_dsb;
+    QDoubleSpinBox *w4_r_dsb;
+    QDoubleSpinBox *w4_vx0_dsb;
+    QDoubleSpinBox *w4_vy0_dsb;
+    QWidget *widget_5;
+    QWidget *layoutWidget_5;
+    QHBoxLayout *horizontalLayout_15;
+    QLabel *label_11;
+    QSpinBox *w5_x0_sb;
+    QSpinBox *w5_Y0_sb;
+    QDoubleSpinBox *w5_m_dsb;
+    QDoubleSpinBox *w5_r_dsb;
+    QDoubleSpinBox *w5_vx0_dsb;
+    QDoubleSpinBox *w5_vy0_dsb;
+    QWidget *widget_6;
+    QWidget *layoutWidget_8;
+    QHBoxLayout *horizontalLayout_16;
+    QLabel *label_12;
+    QSpinBox *w6_x0_sb;
+    QSpinBox *w6_Y0_sb;
+    QDoubleSpinBox *w6_m_dsb;
+    QDoubleSpinBox *w6_r_dsb;
+    QDoubleSpinBox *w6_vx0_dsb;
+    QDoubleSpinBox *w6_vy0_dsb;
+    QWidget *widget_7;
+    QWidget *layoutWidget_9;
+    QHBoxLayout *horizontalLayout_17;
+    QLabel *label_13;
+    QSpinBox *w7_x0_sb;
+    QSpinBox *w7_Y0_sb;
+    QDoubleSpinBox *w7_m_dsb;
+    QDoubleSpinBox *w7_r_dsb;
+    QDoubleSpinBox *w7_vx0_dsb;
+    QDoubleSpinBox *w7_vy0_dsb;
+    QWidget *widget_8;
+    QWidget *widget2;
+    QHBoxLayout *horizontalLayout;
+    QLabel *cuerpoLbl;
+    QLabel *X0Lbl;
+    QLabel *Y0Lbl;
+    QLabel *masaLbl;
+    QLabel *radioLbl;
+    QLabel *velX0Lbl;
+    QLabel *velY0Lbl;
+    QWidget *widget3;
+    QHBoxLayout *horizontalLayout_4;
+    QPushButton *guardarValoresBtn;
+    QPushButton *limpiarValoresBtn;
     QWidget *simTab;
     QGridLayout *gridLayout;
     QPushButton *stopSimBtn;
@@ -86,151 +143,402 @@ public:
         TabWidget->setObjectName("TabWidget");
         SetUpTab = new QWidget();
         SetUpTab->setObjectName("SetUpTab");
-        aceptarBtn = new QPushButton(SetUpTab);
-        aceptarBtn->setObjectName("aceptarBtn");
-        aceptarBtn->setGeometry(QRect(9, 476, 80, 24));
-        defaultBtn = new QPushButton(SetUpTab);
-        defaultBtn->setObjectName("defaultBtn");
-        defaultBtn->setGeometry(QRect(124, 476, 109, 24));
-        widget = new QWidget(SetUpTab);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(0, 110, 771, 71));
-        horizontalLayout = new QHBoxLayout(widget);
-        horizontalLayout->setObjectName("horizontalLayout");
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName("verticalLayout");
-        cuerpoLbl = new QLabel(widget);
-        cuerpoLbl->setObjectName("cuerpoLbl");
-        cuerpoLbl->setAlignment(Qt::AlignCenter);
-        cuerpoLbl->setMargin(0);
-
-        verticalLayout->addWidget(cuerpoLbl);
-
-        comboBox = new QComboBox(widget);
-        comboBox->setObjectName("comboBox");
-
-        verticalLayout->addWidget(comboBox);
-
-
-        horizontalLayout->addLayout(verticalLayout);
-
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName("verticalLayout_2");
-        X0Lbl = new QLabel(widget);
-        X0Lbl->setObjectName("X0Lbl");
-        X0Lbl->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_2->addWidget(X0Lbl);
-
-        spinBox = new QSpinBox(widget);
-        spinBox->setObjectName("spinBox");
-
-        verticalLayout_2->addWidget(spinBox);
-
-
-        horizontalLayout->addLayout(verticalLayout_2);
-
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
-        Y0Lbl = new QLabel(widget);
-        Y0Lbl->setObjectName("Y0Lbl");
-        Y0Lbl->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_3->addWidget(Y0Lbl);
-
-        spinBox_2 = new QSpinBox(widget);
-        spinBox_2->setObjectName("spinBox_2");
-
-        verticalLayout_3->addWidget(spinBox_2);
-
-
-        horizontalLayout->addLayout(verticalLayout_3);
-
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName("verticalLayout_4");
-        masaLbl = new QLabel(widget);
-        masaLbl->setObjectName("masaLbl");
-        masaLbl->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_4->addWidget(masaLbl);
-
-        doubleSpinBox = new QDoubleSpinBox(widget);
-        doubleSpinBox->setObjectName("doubleSpinBox");
-
-        verticalLayout_4->addWidget(doubleSpinBox);
-
-
-        horizontalLayout->addLayout(verticalLayout_4);
-
-        verticalLayout_5 = new QVBoxLayout();
-        verticalLayout_5->setObjectName("verticalLayout_5");
-        radioLbl = new QLabel(widget);
-        radioLbl->setObjectName("radioLbl");
-        radioLbl->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_5->addWidget(radioLbl);
-
-        doubleSpinBox_2 = new QDoubleSpinBox(widget);
-        doubleSpinBox_2->setObjectName("doubleSpinBox_2");
-
-        verticalLayout_5->addWidget(doubleSpinBox_2);
-
-
-        horizontalLayout->addLayout(verticalLayout_5);
-
-        verticalLayout_6 = new QVBoxLayout();
-        verticalLayout_6->setObjectName("verticalLayout_6");
-        velX0Lbl = new QLabel(widget);
-        velX0Lbl->setObjectName("velX0Lbl");
-        velX0Lbl->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_6->addWidget(velX0Lbl);
-
-        doubleSpinBox_3 = new QDoubleSpinBox(widget);
-        doubleSpinBox_3->setObjectName("doubleSpinBox_3");
-
-        verticalLayout_6->addWidget(doubleSpinBox_3);
-
-
-        horizontalLayout->addLayout(verticalLayout_6);
-
-        verticalLayout_7 = new QVBoxLayout();
-        verticalLayout_7->setObjectName("verticalLayout_7");
-        velY0Lbl = new QLabel(widget);
-        velY0Lbl->setObjectName("velY0Lbl");
-        velY0Lbl->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_7->addWidget(velY0Lbl);
-
-        doubleSpinBox_4 = new QDoubleSpinBox(widget);
-        doubleSpinBox_4->setObjectName("doubleSpinBox_4");
-
-        verticalLayout_7->addWidget(doubleSpinBox_4);
-
-
-        horizontalLayout->addLayout(verticalLayout_7);
-
-        widget1 = new QWidget(SetUpTab);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(0, 40, 311, 27));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget = new QWidget(SetUpTab);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(0, 40, 311, 27));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        cantCuerposLbl = new QLabel(widget1);
+        cantCuerposLbl = new QLabel(layoutWidget);
         cantCuerposLbl->setObjectName("cantCuerposLbl");
 
         horizontalLayout_2->addWidget(cantCuerposLbl);
 
-        cantCuerposSpinBox = new QSpinBox(widget1);
+        cantCuerposSpinBox = new QSpinBox(layoutWidget);
         cantCuerposSpinBox->setObjectName("cantCuerposSpinBox");
 
         horizontalLayout_2->addWidget(cantCuerposSpinBox);
 
-        aplicarBtn = new QPushButton(widget1);
+        aplicarBtn = new QPushButton(layoutWidget);
         aplicarBtn->setObjectName("aplicarBtn");
 
         horizontalLayout_2->addWidget(aplicarBtn);
+
+        widget = new QWidget(SetUpTab);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(0, 140, 781, 31));
+        widget1 = new QWidget(widget);
+        widget1->setObjectName("widget1");
+        widget1->setGeometry(QRect(0, 0, 771, 27));
+        horizontalLayout_5 = new QHBoxLayout(widget1);
+        horizontalLayout_5->setObjectName("horizontalLayout_5");
+        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(widget1);
+        label->setObjectName("label");
+
+        horizontalLayout_5->addWidget(label, 0, Qt::AlignHCenter);
+
+        w1_X0_sb = new QSpinBox(widget1);
+        w1_X0_sb->setObjectName("w1_X0_sb");
+
+        horizontalLayout_5->addWidget(w1_X0_sb);
+
+        w1_Y0_sb = new QSpinBox(widget1);
+        w1_Y0_sb->setObjectName("w1_Y0_sb");
+
+        horizontalLayout_5->addWidget(w1_Y0_sb);
+
+        w1_m_dsb = new QDoubleSpinBox(widget1);
+        w1_m_dsb->setObjectName("w1_m_dsb");
+
+        horizontalLayout_5->addWidget(w1_m_dsb);
+
+        w1_r_dsb = new QDoubleSpinBox(widget1);
+        w1_r_dsb->setObjectName("w1_r_dsb");
+
+        horizontalLayout_5->addWidget(w1_r_dsb);
+
+        w1_vx0_dsb = new QDoubleSpinBox(widget1);
+        w1_vx0_dsb->setObjectName("w1_vx0_dsb");
+
+        horizontalLayout_5->addWidget(w1_vx0_dsb);
+
+        w1_vy0_dsb = new QDoubleSpinBox(widget1);
+        w1_vy0_dsb->setObjectName("w1_vy0_dsb");
+
+        horizontalLayout_5->addWidget(w1_vy0_dsb);
+
+        widget_2 = new QWidget(SetUpTab);
+        widget_2->setObjectName("widget_2");
+        widget_2->setGeometry(QRect(0, 180, 781, 31));
+        layoutWidget_2 = new QWidget(widget_2);
+        layoutWidget_2->setObjectName("layoutWidget_2");
+        layoutWidget_2->setGeometry(QRect(0, 0, 771, 27));
+        horizontalLayout_12 = new QHBoxLayout(layoutWidget_2);
+        horizontalLayout_12->setObjectName("horizontalLayout_12");
+        horizontalLayout_12->setContentsMargins(0, 0, 0, 0);
+        label_8 = new QLabel(layoutWidget_2);
+        label_8->setObjectName("label_8");
+
+        horizontalLayout_12->addWidget(label_8, 0, Qt::AlignHCenter);
+
+        w2_x0_sb = new QSpinBox(layoutWidget_2);
+        w2_x0_sb->setObjectName("w2_x0_sb");
+
+        horizontalLayout_12->addWidget(w2_x0_sb);
+
+        w2_Y0_sb = new QSpinBox(layoutWidget_2);
+        w2_Y0_sb->setObjectName("w2_Y0_sb");
+
+        horizontalLayout_12->addWidget(w2_Y0_sb);
+
+        w2_m_dsb = new QDoubleSpinBox(layoutWidget_2);
+        w2_m_dsb->setObjectName("w2_m_dsb");
+
+        horizontalLayout_12->addWidget(w2_m_dsb);
+
+        w2_r_dsb = new QDoubleSpinBox(layoutWidget_2);
+        w2_r_dsb->setObjectName("w2_r_dsb");
+
+        horizontalLayout_12->addWidget(w2_r_dsb);
+
+        w2_vx0_dsb = new QDoubleSpinBox(layoutWidget_2);
+        w2_vx0_dsb->setObjectName("w2_vx0_dsb");
+
+        horizontalLayout_12->addWidget(w2_vx0_dsb);
+
+        w2_vy0_dsb = new QDoubleSpinBox(layoutWidget_2);
+        w2_vy0_dsb->setObjectName("w2_vy0_dsb");
+
+        horizontalLayout_12->addWidget(w2_vy0_dsb);
+
+        widget_3 = new QWidget(SetUpTab);
+        widget_3->setObjectName("widget_3");
+        widget_3->setGeometry(QRect(0, 220, 781, 31));
+        layoutWidget_3 = new QWidget(widget_3);
+        layoutWidget_3->setObjectName("layoutWidget_3");
+        layoutWidget_3->setGeometry(QRect(0, 0, 771, 27));
+        horizontalLayout_13 = new QHBoxLayout(layoutWidget_3);
+        horizontalLayout_13->setObjectName("horizontalLayout_13");
+        horizontalLayout_13->setContentsMargins(0, 0, 0, 0);
+        label_9 = new QLabel(layoutWidget_3);
+        label_9->setObjectName("label_9");
+
+        horizontalLayout_13->addWidget(label_9, 0, Qt::AlignHCenter);
+
+        w3_x0_sb = new QSpinBox(layoutWidget_3);
+        w3_x0_sb->setObjectName("w3_x0_sb");
+
+        horizontalLayout_13->addWidget(w3_x0_sb);
+
+        w3_Y0_sb = new QSpinBox(layoutWidget_3);
+        w3_Y0_sb->setObjectName("w3_Y0_sb");
+
+        horizontalLayout_13->addWidget(w3_Y0_sb);
+
+        w3_m_dsb = new QDoubleSpinBox(layoutWidget_3);
+        w3_m_dsb->setObjectName("w3_m_dsb");
+
+        horizontalLayout_13->addWidget(w3_m_dsb);
+
+        w3_r_dsb = new QDoubleSpinBox(layoutWidget_3);
+        w3_r_dsb->setObjectName("w3_r_dsb");
+
+        horizontalLayout_13->addWidget(w3_r_dsb);
+
+        w3_vx0_dsb = new QDoubleSpinBox(layoutWidget_3);
+        w3_vx0_dsb->setObjectName("w3_vx0_dsb");
+
+        horizontalLayout_13->addWidget(w3_vx0_dsb);
+
+        w3_vy0_dsb = new QDoubleSpinBox(layoutWidget_3);
+        w3_vy0_dsb->setObjectName("w3_vy0_dsb");
+
+        horizontalLayout_13->addWidget(w3_vy0_dsb);
+
+        widget_4 = new QWidget(SetUpTab);
+        widget_4->setObjectName("widget_4");
+        widget_4->setGeometry(QRect(0, 260, 781, 31));
+        layoutWidget_4 = new QWidget(widget_4);
+        layoutWidget_4->setObjectName("layoutWidget_4");
+        layoutWidget_4->setGeometry(QRect(0, 0, 771, 27));
+        horizontalLayout_14 = new QHBoxLayout(layoutWidget_4);
+        horizontalLayout_14->setObjectName("horizontalLayout_14");
+        horizontalLayout_14->setContentsMargins(0, 0, 0, 0);
+        label_10 = new QLabel(layoutWidget_4);
+        label_10->setObjectName("label_10");
+
+        horizontalLayout_14->addWidget(label_10, 0, Qt::AlignHCenter);
+
+        w4_x0_sb = new QSpinBox(layoutWidget_4);
+        w4_x0_sb->setObjectName("w4_x0_sb");
+
+        horizontalLayout_14->addWidget(w4_x0_sb);
+
+        w4_Y0_sb = new QSpinBox(layoutWidget_4);
+        w4_Y0_sb->setObjectName("w4_Y0_sb");
+
+        horizontalLayout_14->addWidget(w4_Y0_sb);
+
+        w4_m_dsb = new QDoubleSpinBox(layoutWidget_4);
+        w4_m_dsb->setObjectName("w4_m_dsb");
+
+        horizontalLayout_14->addWidget(w4_m_dsb);
+
+        w4_r_dsb = new QDoubleSpinBox(layoutWidget_4);
+        w4_r_dsb->setObjectName("w4_r_dsb");
+
+        horizontalLayout_14->addWidget(w4_r_dsb);
+
+        w4_vx0_dsb = new QDoubleSpinBox(layoutWidget_4);
+        w4_vx0_dsb->setObjectName("w4_vx0_dsb");
+
+        horizontalLayout_14->addWidget(w4_vx0_dsb);
+
+        w4_vy0_dsb = new QDoubleSpinBox(layoutWidget_4);
+        w4_vy0_dsb->setObjectName("w4_vy0_dsb");
+
+        horizontalLayout_14->addWidget(w4_vy0_dsb);
+
+        widget_5 = new QWidget(SetUpTab);
+        widget_5->setObjectName("widget_5");
+        widget_5->setGeometry(QRect(0, 300, 781, 31));
+        layoutWidget_5 = new QWidget(widget_5);
+        layoutWidget_5->setObjectName("layoutWidget_5");
+        layoutWidget_5->setGeometry(QRect(0, 0, 771, 27));
+        horizontalLayout_15 = new QHBoxLayout(layoutWidget_5);
+        horizontalLayout_15->setObjectName("horizontalLayout_15");
+        horizontalLayout_15->setContentsMargins(0, 0, 0, 0);
+        label_11 = new QLabel(layoutWidget_5);
+        label_11->setObjectName("label_11");
+
+        horizontalLayout_15->addWidget(label_11, 0, Qt::AlignHCenter);
+
+        w5_x0_sb = new QSpinBox(layoutWidget_5);
+        w5_x0_sb->setObjectName("w5_x0_sb");
+
+        horizontalLayout_15->addWidget(w5_x0_sb);
+
+        w5_Y0_sb = new QSpinBox(layoutWidget_5);
+        w5_Y0_sb->setObjectName("w5_Y0_sb");
+
+        horizontalLayout_15->addWidget(w5_Y0_sb);
+
+        w5_m_dsb = new QDoubleSpinBox(layoutWidget_5);
+        w5_m_dsb->setObjectName("w5_m_dsb");
+
+        horizontalLayout_15->addWidget(w5_m_dsb);
+
+        w5_r_dsb = new QDoubleSpinBox(layoutWidget_5);
+        w5_r_dsb->setObjectName("w5_r_dsb");
+
+        horizontalLayout_15->addWidget(w5_r_dsb);
+
+        w5_vx0_dsb = new QDoubleSpinBox(layoutWidget_5);
+        w5_vx0_dsb->setObjectName("w5_vx0_dsb");
+
+        horizontalLayout_15->addWidget(w5_vx0_dsb);
+
+        w5_vy0_dsb = new QDoubleSpinBox(layoutWidget_5);
+        w5_vy0_dsb->setObjectName("w5_vy0_dsb");
+
+        horizontalLayout_15->addWidget(w5_vy0_dsb);
+
+        widget_6 = new QWidget(SetUpTab);
+        widget_6->setObjectName("widget_6");
+        widget_6->setGeometry(QRect(0, 340, 781, 31));
+        layoutWidget_8 = new QWidget(widget_6);
+        layoutWidget_8->setObjectName("layoutWidget_8");
+        layoutWidget_8->setGeometry(QRect(0, 0, 771, 27));
+        horizontalLayout_16 = new QHBoxLayout(layoutWidget_8);
+        horizontalLayout_16->setObjectName("horizontalLayout_16");
+        horizontalLayout_16->setContentsMargins(0, 0, 0, 0);
+        label_12 = new QLabel(layoutWidget_8);
+        label_12->setObjectName("label_12");
+
+        horizontalLayout_16->addWidget(label_12, 0, Qt::AlignHCenter);
+
+        w6_x0_sb = new QSpinBox(layoutWidget_8);
+        w6_x0_sb->setObjectName("w6_x0_sb");
+
+        horizontalLayout_16->addWidget(w6_x0_sb);
+
+        w6_Y0_sb = new QSpinBox(layoutWidget_8);
+        w6_Y0_sb->setObjectName("w6_Y0_sb");
+
+        horizontalLayout_16->addWidget(w6_Y0_sb);
+
+        w6_m_dsb = new QDoubleSpinBox(layoutWidget_8);
+        w6_m_dsb->setObjectName("w6_m_dsb");
+
+        horizontalLayout_16->addWidget(w6_m_dsb);
+
+        w6_r_dsb = new QDoubleSpinBox(layoutWidget_8);
+        w6_r_dsb->setObjectName("w6_r_dsb");
+
+        horizontalLayout_16->addWidget(w6_r_dsb);
+
+        w6_vx0_dsb = new QDoubleSpinBox(layoutWidget_8);
+        w6_vx0_dsb->setObjectName("w6_vx0_dsb");
+
+        horizontalLayout_16->addWidget(w6_vx0_dsb);
+
+        w6_vy0_dsb = new QDoubleSpinBox(layoutWidget_8);
+        w6_vy0_dsb->setObjectName("w6_vy0_dsb");
+
+        horizontalLayout_16->addWidget(w6_vy0_dsb);
+
+        widget_7 = new QWidget(SetUpTab);
+        widget_7->setObjectName("widget_7");
+        widget_7->setGeometry(QRect(0, 380, 781, 31));
+        layoutWidget_9 = new QWidget(widget_7);
+        layoutWidget_9->setObjectName("layoutWidget_9");
+        layoutWidget_9->setGeometry(QRect(0, 0, 771, 27));
+        horizontalLayout_17 = new QHBoxLayout(layoutWidget_9);
+        horizontalLayout_17->setObjectName("horizontalLayout_17");
+        horizontalLayout_17->setContentsMargins(0, 0, 0, 0);
+        label_13 = new QLabel(layoutWidget_9);
+        label_13->setObjectName("label_13");
+
+        horizontalLayout_17->addWidget(label_13, 0, Qt::AlignHCenter);
+
+        w7_x0_sb = new QSpinBox(layoutWidget_9);
+        w7_x0_sb->setObjectName("w7_x0_sb");
+
+        horizontalLayout_17->addWidget(w7_x0_sb);
+
+        w7_Y0_sb = new QSpinBox(layoutWidget_9);
+        w7_Y0_sb->setObjectName("w7_Y0_sb");
+
+        horizontalLayout_17->addWidget(w7_Y0_sb);
+
+        w7_m_dsb = new QDoubleSpinBox(layoutWidget_9);
+        w7_m_dsb->setObjectName("w7_m_dsb");
+
+        horizontalLayout_17->addWidget(w7_m_dsb);
+
+        w7_r_dsb = new QDoubleSpinBox(layoutWidget_9);
+        w7_r_dsb->setObjectName("w7_r_dsb");
+
+        horizontalLayout_17->addWidget(w7_r_dsb);
+
+        w7_vx0_dsb = new QDoubleSpinBox(layoutWidget_9);
+        w7_vx0_dsb->setObjectName("w7_vx0_dsb");
+
+        horizontalLayout_17->addWidget(w7_vx0_dsb);
+
+        w7_vy0_dsb = new QDoubleSpinBox(layoutWidget_9);
+        w7_vy0_dsb->setObjectName("w7_vy0_dsb");
+
+        horizontalLayout_17->addWidget(w7_vy0_dsb);
+
+        widget_8 = new QWidget(SetUpTab);
+        widget_8->setObjectName("widget_8");
+        widget_8->setGeometry(QRect(0, 100, 781, 21));
+        widget2 = new QWidget(widget_8);
+        widget2->setObjectName("widget2");
+        widget2->setGeometry(QRect(0, 0, 771, 18));
+        horizontalLayout = new QHBoxLayout(widget2);
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        cuerpoLbl = new QLabel(widget2);
+        cuerpoLbl->setObjectName("cuerpoLbl");
+        cuerpoLbl->setAlignment(Qt::AlignCenter);
+        cuerpoLbl->setMargin(0);
+
+        horizontalLayout->addWidget(cuerpoLbl);
+
+        X0Lbl = new QLabel(widget2);
+        X0Lbl->setObjectName("X0Lbl");
+        X0Lbl->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout->addWidget(X0Lbl);
+
+        Y0Lbl = new QLabel(widget2);
+        Y0Lbl->setObjectName("Y0Lbl");
+        Y0Lbl->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout->addWidget(Y0Lbl);
+
+        masaLbl = new QLabel(widget2);
+        masaLbl->setObjectName("masaLbl");
+        masaLbl->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout->addWidget(masaLbl);
+
+        radioLbl = new QLabel(widget2);
+        radioLbl->setObjectName("radioLbl");
+        radioLbl->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout->addWidget(radioLbl);
+
+        velX0Lbl = new QLabel(widget2);
+        velX0Lbl->setObjectName("velX0Lbl");
+        velX0Lbl->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout->addWidget(velX0Lbl);
+
+        velY0Lbl = new QLabel(widget2);
+        velY0Lbl->setObjectName("velY0Lbl");
+        velY0Lbl->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout->addWidget(velY0Lbl);
+
+        widget3 = new QWidget(SetUpTab);
+        widget3->setObjectName("widget3");
+        widget3->setGeometry(QRect(9, 476, 241, 26));
+        horizontalLayout_4 = new QHBoxLayout(widget3);
+        horizontalLayout_4->setObjectName("horizontalLayout_4");
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        guardarValoresBtn = new QPushButton(widget3);
+        guardarValoresBtn->setObjectName("guardarValoresBtn");
+
+        horizontalLayout_4->addWidget(guardarValoresBtn);
+
+        limpiarValoresBtn = new QPushButton(widget3);
+        limpiarValoresBtn->setObjectName("limpiarValoresBtn");
+
+        horizontalLayout_4->addWidget(limpiarValoresBtn);
 
         TabWidget->addTab(SetUpTab, QString());
         simTab = new QWidget();
@@ -260,6 +568,7 @@ public:
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setNativeMenuBar(true);
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -276,8 +585,15 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        aceptarBtn->setText(QCoreApplication::translate("MainWindow", "Aceptar", nullptr));
-        defaultBtn->setText(QCoreApplication::translate("MainWindow", "Valores por defecto", nullptr));
+        cantCuerposLbl->setText(QCoreApplication::translate("MainWindow", "Cantidad de cuerpos", nullptr));
+        aplicarBtn->setText(QCoreApplication::translate("MainWindow", "Aplicar", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", "2", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "3", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "4", nullptr));
+        label_11->setText(QCoreApplication::translate("MainWindow", "5", nullptr));
+        label_12->setText(QCoreApplication::translate("MainWindow", "6", nullptr));
+        label_13->setText(QCoreApplication::translate("MainWindow", "7", nullptr));
         cuerpoLbl->setText(QCoreApplication::translate("MainWindow", "Cuerpo", nullptr));
         X0Lbl->setText(QCoreApplication::translate("MainWindow", "Posicion X inicial", nullptr));
         Y0Lbl->setText(QCoreApplication::translate("MainWindow", "Posicion Y inicial", nullptr));
@@ -285,8 +601,8 @@ public:
         radioLbl->setText(QCoreApplication::translate("MainWindow", "Radio", nullptr));
         velX0Lbl->setText(QCoreApplication::translate("MainWindow", "Vel. X inicial", nullptr));
         velY0Lbl->setText(QCoreApplication::translate("MainWindow", "Vel. Y inicial", nullptr));
-        cantCuerposLbl->setText(QCoreApplication::translate("MainWindow", "Cantidad de cuerpos", nullptr));
-        aplicarBtn->setText(QCoreApplication::translate("MainWindow", "Aplicar", nullptr));
+        guardarValoresBtn->setText(QCoreApplication::translate("MainWindow", "Guardar valores", nullptr));
+        limpiarValoresBtn->setText(QCoreApplication::translate("MainWindow", "Limpiar", nullptr));
         TabWidget->setTabText(TabWidget->indexOf(SetUpTab), QCoreApplication::translate("MainWindow", "Set up", nullptr));
         stopSimBtn->setText(QCoreApplication::translate("MainWindow", "Detener simulacion", nullptr));
         startSimBtn->setText(QCoreApplication::translate("MainWindow", "Inicear simulacion", nullptr));
