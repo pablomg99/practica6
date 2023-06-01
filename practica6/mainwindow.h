@@ -5,6 +5,7 @@
 #include <QGraphicsItem>
 #include <QList>
 #include <QObject>
+#include <QTimer>
 #include "cuerpo.h"
 
 QT_BEGIN_NAMESPACE
@@ -17,6 +18,7 @@ class MainWindow : public QMainWindow
 
 public:
     int cantCuerpos;
+    float T, g=1;
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
@@ -28,6 +30,10 @@ private slots:
     void on_limpiarValoresBtn_clicked();
 
     void on_startSimBtn_clicked();
+
+    void mover_elemento();
+
+    void on_stopSimBtn_clicked();
 
 private:
     Ui::MainWindow *ui;
