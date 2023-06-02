@@ -6,6 +6,8 @@
 #include <QList>
 #include <QObject>
 #include <QTimer>
+#include <cmath>
+#include <iostream>
 #include "cuerpo.h"
 
 QT_BEGIN_NAMESPACE
@@ -40,5 +42,7 @@ private:
     QGraphicsScene *escena;
     QList<cuerpo*> cuerpos;
     QTimer *time;
+    void calcularDinamica();
+    void calcularCinematica(cuerpo *c1);
 };
 #endif // MAINWINDOW_H

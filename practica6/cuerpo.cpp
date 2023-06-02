@@ -5,7 +5,7 @@ cuerpo::cuerpo()
 
 }
 
-cuerpo::cuerpo(int posx, int posy, float masa, float radio, float velx, float vely)
+cuerpo::cuerpo(float posx, float posy, float masa, float radio, float velx, float vely)
 {
     this->x=posx;
     this->y=posy;

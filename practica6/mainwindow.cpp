@@ -310,26 +310,7 @@ void MainWindow::on_startSimBtn_clicked()
 
 void MainWindow::mover_elemento()
 {
-    cuerpo *c1, *c2;
-
-    for(int i=0; i<cantCuerpos; i++){
-        c1= cuerpos.at(i);
-        for(int j=0; j<cantCuerpos; j++){
-            if(i!=j){
-                int distx, disty;
-                c2=cuerpos.at(j);
-                distx = (c1->x) - (c2->x);
-                disty = (c1->y) - (c2->y);
-                c1->ax += g * ((c2->m / qAbs(qPow(distx, 3))) * distx);
-                c1->ay += g * ((c2->m / qAbs(qPow(disty, 3))) * disty);
-                c1->vx += c1->ax * T;
-                c1->vy += c1->ay * T;
-                c1->x += c1->vx*T;
-                c1->y += c1->vy*T;
-            }
-        }
-        c1->setPos(c1->x, c1->y);
-    }
+    calcularDinamica();
 }
 
 
@@ -338,3 +319,36 @@ void MainWindow::on_stopSimBtn_clicked()
     time->stop();
 }
 
+void MainWindow::calcularDinamica()
+{
+    cuerpo *c1, *c2;
+    float r, angulo, G;
+
+    for(int i=0; i<cantCuerpos; i++){
+        c1=cuerpos.at(i);
+
+        for(int j=0; j<cantCuerpos; j++){
+            if(j != i){
+                c2=cuerpos.at(j);
+
+                r = qSqrt(pow(c2->x,2)+pow(c1->x,2));
+                angulo = std::atan((c2->y - c1->y)/(c2->x - c2->y));
+                G = 1;
+
+                c1->ax += ((G*c2->m)/pow(r,2))*(1/std::sin(angulo));
+                c1->ay += ((G*c2->m)/pow(r,2))* std::sin(angulo);
+            }
+        }        
+        calcularCinematica(c1);
+    }
+
+}
+
+void MainWindow::calcularCinematica(cuerpo *c1)
+{
+    c1->vx += c1->ax * T;
+    c1->vy += c1->ay * T;
+    c1->x += c1->vx*T;
+    c1->y += c1->vy*T;
+    c1->setPos(c1->x, c1->y);
+}
