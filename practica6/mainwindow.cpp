@@ -322,7 +322,7 @@ void MainWindow::on_stopSimBtn_clicked()
 void MainWindow::calcularDinamica()
 {
     cuerpo *c1, *c2;
-    float r, angulo, G;
+    float r, G;
 
     for(int i=0; i<cantCuerpos; i++){
         c1=cuerpos.at(i);
@@ -330,13 +330,14 @@ void MainWindow::calcularDinamica()
         for(int j=0; j<cantCuerpos; j++){
             if(j != i){
                 c2=cuerpos.at(j);
-
-                r = qSqrt(pow(c2->x,2)+pow(c1->x,2));
-                angulo = std::atan((c2->y - c1->y)/(c2->x - c2->y));
+                float distx, disty;
+                distx=c2->x - c1->x;
+                disty=c2->y - c1->y;
+                r = qSqrt((distx*distx)+(disty*disty));
                 G = 1;
 
-                c1->ax += ((G*c2->m)/pow(r,2))*(1/std::sin(angulo));
-                c1->ay += ((G*c2->m)/pow(r,2))* std::sin(angulo);
+                c1->ax += G * distx / r / c1->m;
+                c1->ay += G * disty / r / c2->m;
             }
         }        
         calcularCinematica(c1);
